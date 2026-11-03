@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LabStock - Inventario</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script defer src="modelo.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+<main>
+  <header><p>INFORMATICA 2 / LABORATORIO</p>
+    <h1>LabStock</h1><p>Equipos disponibles para aprender.</p></header>
+  <section class="tarjeta" aria-label="Resumen">
+    <h2>Inventario del laboratorio</h2><p id="resumen"></p>
+  </section>
+  <section class="tarjeta">
+    <h2>Registrar equipo</h2>
+    <form id="registro">
+      <label>Codigo<input name="codigo" required maxlength="20"></label>
+      <label>Nombre<input name="nombre" required maxlength="80"></label>
+      <label>Ubicacion<input name="ubicacion" required maxlength="50" value="Laboratorio Principal"></label>
+      <label>Unidades<input name="total" type="number" min="1" step="1" required></label>
+      <button>Agregar equipo</button>
+    </form>
+    <p id="mensaje" role="status" aria-live="polite"></p>
+  </section>
+  <section class="tarjeta">
+    <label>Buscar por codigo, nombre o ubicacion<input id="busqueda" type="search"></label>
+    <div class="tabla"><table>
+      <caption>Equipos y movimientos de una unidad</caption>
+      <thead><tr><th>Codigo</th><th>Equipo</th><th>Ubicacion</th><th>Total</th>
+        <th>Disponibles</th><th>Prestados</th><th>Acciones</th></tr></thead>
+      <tbody id="filas"></tbody>
+    </table></div>
+  </section>
+</main>
+</body>
+</html>
