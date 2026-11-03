@@ -6,7 +6,7 @@
 
 En esta carpeta ejecute `python -m http.server 8000` y abra `http://localhost:8000` en su navegador. Python se usa únicamente para servir los archivos.
 
-## Novedades de esta versión
+## Cambios en esta versión
 
 * **Ubicación:** Se añadió el atributo `ubicacion` a cada referencia de equipo (con valor por defecto `'Laboratorio Principal'` para datos anteriores).
 * **Alerta de baja disponibilidad:** La interfaz muestra automáticamente una advertencia textual y visual cuando a una referencia le quedan 2 o menos unidades disponibles.
